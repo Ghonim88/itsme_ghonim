@@ -13,25 +13,52 @@
         <!-- Hamburger Menu Button -->
         <button 
           class="hamburger-btn"
-          @click="toggleSidebar"
-          :class="{ 'active': sidebarOpen }"
+          @click="toggleNavigation"
+          :class="{ 'active': navigationOpen }"
         >
           <span class="line line-1"></span>
           <span class="line line-2"></span>
           <span class="line line-3"></span>
         </button>
+
+        <!-- Desktop Horizontal Navigation -->
+        <div 
+          class="desktop-nav" 
+          :class="{ 'open': navigationOpen }"
+        >
+          <nav class="horizontal-nav">
+            <ul class="horizontal-nav-list">
+              <li 
+                v-for="(item, index) in navItems" 
+                :key="item.id"
+                class="horizontal-nav-item"
+                :style="{ animationDelay: navigationOpen ? `${index * 0.1}s` : '0s' }"
+              >
+                <a 
+                  href="#"
+                  class="horizontal-nav-link"
+                  :class="{ 'active': activeSection === item.id }"
+                  @click.prevent="navigateTo(item.id)"
+                >
+                    <!-- Emoji removed -->
+                  <span class="horizontal-nav-text">{{ item.label }}</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </nav>
 
-    <!-- Overlay -->
+    <!-- Overlay (Mobile Only) -->
     <div 
-      class="overlay" 
-      :class="{ 'active': sidebarOpen }"
-      @click="closeSidebar"
+      class="overlay mobile-only" 
+      :class="{ 'active': navigationOpen }"
+      @click="closeNavigation"
     ></div>
 
-    <!-- Sidebar -->
-    <div class="sidebar" :class="{ 'open': sidebarOpen }">
+    <!-- Sidebar (Mobile Only) -->
+    <div class="sidebar mobile-only" :class="{ 'open': navigationOpen }">
       <!-- Sidebar Header -->
       <div class="sidebar-header">
         <div class="sidebar-profile">
@@ -42,7 +69,7 @@
           </div>
         </div>
         
-        <button class="close-btn" @click="closeSidebar">
+        <button class="close-btn" @click="closeNavigation">
           <span>&times;</span>
         </button>
       </div>
@@ -54,7 +81,7 @@
             v-for="(item, index) in navItems" 
             :key="item.id"
             class="nav-item"
-            :style="{ animationDelay: sidebarOpen ? `${index * 0.1}s` : '0s' }"
+            :style="{ animationDelay: navigationOpen ? `${index * 0.1}s` : '0s' }"
           >
             <a 
               href="#"
@@ -99,7 +126,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 // Reactive data
 const activeSection = ref('home')
 const isScrolled = ref(false)
-const sidebarOpen = ref(false)
+const navigationOpen = ref(false)
 
 // Personal info - replace with your details
 const fullName = 'John Smith'
@@ -119,25 +146,27 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
 }
 
-const toggleSidebar = () => {
-  sidebarOpen.value = !sidebarOpen.value
+const toggleNavigation = () => {
+  navigationOpen.value = !navigationOpen.value
   
-  // Prevent body scroll when sidebar is open
-  if (sidebarOpen.value) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'auto'
+  // Prevent body scroll when mobile sidebar is open
+  if (window.innerWidth <= 768) {
+    if (navigationOpen.value) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   }
 }
 
-const closeSidebar = () => {
-  sidebarOpen.value = false
+const closeNavigation = () => {
+  navigationOpen.value = false
   document.body.style.overflow = 'auto'
 }
 
 const navigateTo = (sectionId) => {
   activeSection.value = sectionId
-  closeSidebar()
+  closeNavigation()
   
   // Smooth scroll to section
   const element = document.getElementById(sectionId)
@@ -149,13 +178,25 @@ const navigateTo = (sectionId) => {
   }
 }
 
+// Close navigation when clicking outside on desktop
+const handleClickOutside = (event) => {
+  if (window.innerWidth > 768 && navigationOpen.value) {
+    const navbar = document.querySelector('.main-navbar')
+    if (navbar && !navbar.contains(event.target)) {
+      closeNavigation()
+    }
+  }
+}
+
 // Lifecycle hooks
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  document.addEventListener('click', handleClickOutside)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('click', handleClickOutside)
   document.body.style.overflow = 'auto'
 })
 </script>
@@ -186,6 +227,7 @@ onUnmounted(() => {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* Logo Section */
@@ -263,6 +305,128 @@ onUnmounted(() => {
 .hamburger-btn.active .line-3 {
   transform: rotate(-45deg) translate(8px, -8px);
   width: 25px;
+}
+
+/* Desktop Horizontal Navigation */
+.desktop-nav {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  transform: none;
+  margin-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 999;
+  display: none;
+  transform-origin: right top;
+}
+
+.desktop-nav.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.horizontal-nav {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  border: none;
+  overflow: visible;
+  white-space: nowrap;
+  height: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 1.5rem 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.horizontal-nav-item {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: none;
+}
+
+.desktop-nav.open .horizontal-nav-item {
+  animation: slideInFromRight 0.4s ease forwards;
+}
+
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.horizontal-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  color: #fff !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  gap: 0.2rem;
+  min-width: 60px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.horizontal-nav-item:last-child .horizontal-nav-link {
+  border-right: none;
+}
+
+.horizontal-nav-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.horizontal-nav-link.active {
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+}
+
+.horizontal-nav-icon {
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.horizontal-nav-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Show desktop nav on larger screens */
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
 }
 
 /* Overlay */
@@ -511,5 +675,4 @@ onUnmounted(() => {
 /* Scroll offset for fixed navbar */
 html {
   scroll-padding-top: 80px;
-}
-</style>
+}</style>
