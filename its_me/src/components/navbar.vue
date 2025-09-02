@@ -7,7 +7,7 @@
         <!-- Logo -->
         <div class="logo-section">
           <div class="logo-circle">{{ initials }}</div>
-          <span class="brand-text">{{ fullName }}</span>
+          <!-- <span class="brand-text">{{ fullName }}</span> -->
         </div>
 
         <!-- Hamburger Menu Button -->
@@ -41,7 +41,7 @@
                   @click.prevent="navigateTo(item.id)"
                 >
                     <!-- Emoji removed -->
-                  <span class="horizontal-nav-text">{{ item.label }}</span>
+                  <span class="horizontal-nav-text  font-semibold text-gradient ">{{ item.label }}</span>
                 </a>
               </li>
             </ul>
@@ -64,7 +64,7 @@
         <div class="sidebar-profile">
           <div class="profile-avatar">{{ initials }}</div>
           <div class="profile-info">
-            <h3>{{ fullName }}</h3>
+            <!-- <h3>{{ fullName }}</h3> -->
             <p>{{ jobTitle }}</p>
           </div>
         </div>
@@ -129,9 +129,9 @@ const isScrolled = ref(false)
 const navigationOpen = ref(false)
 
 // Personal info - replace with your details
-const fullName = 'John Smith'
-const initials = 'JS'
-const jobTitle = 'Full Stack Developer'
+//const fullName = 'John Smith'
+const initials = 'AG'
+const jobTitle = 'Cloud Computing & Security'
 
 // Navigation items
 const navItems = [
