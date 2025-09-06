@@ -9,14 +9,11 @@
   --color-secondary: #64748b;
   --color-accent: #164e63;
   --color-background:linear-gradient(135deg,
-    rgba(245, 245, 245, 0.9), /* light beige-grey */
+    rgba(255, 255, 255, 0.9), /* light beige-grey */
     rgba(230, 230, 230, 0.9)  /* soft warm grey */
   );
 
-  --color-surface:linear-gradient(135deg,
-    rgba(245, 245, 245, 0.9), /* light beige-grey */
-    rgba(230, 230, 230, 0.9)  /* soft warm grey */
-  );
+  --color-surface:white
   --color-surface-dark: #e0f2fe;
   --color-text: #0f172a;
   --color-text-light: #475569;

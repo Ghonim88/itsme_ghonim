@@ -74,198 +74,201 @@ import { ref, onMounted, onUnmounted } from "vue";
 const scrollProgress = ref(0);
 
 const modalData = {
-  2022: {
-    title: "Started IT Studies",
-    year: "2022",
+  "2022/2023": {
+    title: "Building My Technical Foundations",
+    year: "2022/2023",
     sections: [
       {
         title: "Foundation Courses",
         content: [
-          "Programming Fundamentals (Python, Java)",
+          "Programming Fundamentals (C#)",
+          "Web Development (HTML, CSS, JavaScript basics)",
           "Database Design & SQL",
-          "Computer Networks Basics",
-          "Operating Systems Concepts",
-          "Data Structures & Algorithms",
+          "Networking (Cisco CCNA: Introduction, Switching & Routing)",
+          "Linux Essentials & Information Systems",
+          "Application Modeling & Architecture",
         ],
       },
       {
         title: "Key Projects",
         content: [
-          "First web application using HTML/CSS/JavaScript",
-          "Simple database management system",
-          "Basic networking lab assignments",
-          "Command-line utilities in Python",
+          "Database Application in C# & SQL",
+          "Restaurant Management Application (C#, SQL, Figma)",
         ],
       },
       {
         title: "Skills Developed",
         content: [
-          "Problem-solving methodology",
-          "Logical thinking patterns",
-          "Basic programming concepts",
-          "Version control with Git",
+          "Problem-solving & system modeling",
+          "Basic web and software development",
+          "UX/UI design awareness with Figma",
+          "Team collaboration & Agile methodology (Scrum)",
         ],
       },
     ],
-    tags: ["Python", "Java", "SQL", "HTML/CSS", "Git"],
+    tags: ["C#", "SQL", "JavaScript (basics)","Figma","Linux","Cisco Networking", "HTML/CSS", "Git"],
   },
-  2023: {
-    title: "Security Focus & CTF Competitions",
-    year: "2023",
+  "2023/2024": {
+    title: "Foundation Courses",
+    year: "2023/2024",
     sections: [
       {
-        title: "CTF Competitions Participated",
+        title: "Foundation Courses",
         content: [
-          "PicoCTF 2023 - Ranked in top 15%",
-          "TryHackMe CTF series - 50+ rooms completed",
-          "DEFCON CTF Qualifiers - Team participation",
-          "Local university CTF - 2nd place finish",
-          "OverTheWire wargames - Multiple levels completed",
+          "Programming in Java (Fundamentals & Advanced with Spring Boot, Unit Testing, Cucumber)",
+          "NoSQL databases (MongoDB)",
+          "Functional Modeling: UML, Class Diagrams, Use Case & Activity Diagrams",
+          "Web Development: Advanced JavaScript, Vue.js Framework",
+          "Linux 2: Bash scripting and in-depth system concepts",
         ],
       },
       {
-        title: "Security Skills Acquired",
+        title: "Key Projects",
         content: [
-          "Web application penetration testing",
-          "Binary exploitation and reverse engineering",
-          "Cryptography and cryptanalysis",
-          "Network security analysis",
-          "Digital forensics fundamentals",
+          "Bank Application: Developed a full-stack application with Vue.js frontend and Spring Boot backend, including JWT authentication and unit testing.",
         ],
       },
       {
-        title: "Tools Mastered",
+        title: "Skills Developed",
         content: [
-          "Burp Suite for web security testing",
-          "Metasploit for penetration testing",
-          "Wireshark for network analysis",
-          "IDA Pro for reverse engineering",
-          "John the Ripper for password cracking",
+          "Full-stack web development and modern Java frameworks",
+          "Application modeling & system design using UML",
+          "Practical experience with Agile methodology and test-driven development",
+          "Advanced Linux command-line and scripting skills",
         ],
       },
     ],
     tags: [
-      "CTF",
-      "Penetration Testing",
-      "Burp Suite",
-      "Metasploit",
-      "Cryptography",
-      "Reverse Engineering",
-    ],
-  },
-  2025: {
-    title: "Web Development Specialization",
-    year: "2025",
-    sections: [
-      {
-        title: "Frontend Technologies",
-        content: [
-          "Vue.js 3 with Composition API",
-          "React with TypeScript",
-          "Modern CSS (Grid, Flexbox, Tailwind)",
-          "Progressive Web Apps (PWA)",
-          "State management (Vuex, Redux)",
-        ],
-      },
-      {
-        title: "Backend Development",
-        content: [
-          "Node.js with Express.js",
-          "RESTful API design and development",
-          "Database integration (MongoDB, PostgreSQL)",
-          "Authentication and authorization",
-          "Microservices architecture",
-        ],
-      },
-      {
-        title: "Major Projects",
-        content: [
-          "E-commerce platform with payment integration",
-          "Real-time chat application with Socket.io",
-          "Task management system with team collaboration",
-          "Portfolio website with CMS integration",
-        ],
-      },
-    ],
-    tags: [
+      "Java",
+      "Spring Boot",
+      "Testing (JUnit, Cucumber)",
       "Vue.js",
-      "React",
-      "Node.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "PostgreSQL",
+      "NoSQL",
+      "Bash",
     ],
   },
-  2026: {
-    title: "Advanced Security Specialization",
-    year: "2026",
+  "2024/2025": {
+    title: "Diving into Cybersecurity & Reverse Engineering",
+    year: "2024/2025",
     sections: [
       {
-        title: "Advanced CTF Achievements",
+        title: "Professional Experience",
         content: [
-          "DEFCON CTF Finals qualification",
-          "Google CTF - Top 50 worldwide",
-          "Created custom CTF challenges for university",
-          "Mentored junior students in cybersecurity",
-          "Published security research papers",
+          "Internship (Development): Applied programming, databases, and UI design in a real-world environment, bridging foundational knowledge with professional development experience.",
+          
         ],
       },
       {
-        title: "Professional Security Work",
+        title: "Minor: Binary Exploitation & Reversing",
         content: [
-          "Penetration testing for local businesses",
-          "Security auditing of web applications",
-          "Vulnerability research and disclosure",
-          "Security awareness training programs",
-          "Incident response and digital forensics",
+          "Learned low-level programming: C, C++, Assembly",
+          "Explored security mechanisms: stack, canary, NX, ASLR, PIE",
+          "Hands-on tools: Ghidra, GDB, Pwntools, Python scripting",
+          "Platforms: Windows & Linux exploitation, x64 debugging",
+          "Practical experience through picoCTF challenges and pwn.college exercises",
         ],
       },
       {
-        title: "Specialized Skills",
+        title: "Certifications & Competitions",
         content: [
-          "Advanced malware analysis",
-          "Zero-day vulnerability research",
-          "Cloud security assessment (AWS, Azure)",
-          "Mobile application security testing",
-          "IoT device security evaluation",
+          "TCM Academy: Assembly 101 & Python 201 for Hackers",
+          "Participated in CTF competitions, gaining experience in problem-solving under pressure and joining cybersecurity communities",
+        ],
+      },
+      {
+        title: "Skills Developed",
+        content: [
+          "Low-level programming & reverse engineering",
+          "Binary exploitation & vulnerability analysis",
+          "Debugging & exploit development on Linux/Windows",
+          "Collaboration, problem-solving, and competitive thinking in cybersecurity environments",
         ],
       },
     ],
     tags: [
-      "Advanced CTF",
-      "Penetration Testing",
-      "Vulnerability Research",
-      "Malware Analysis",
-      "Cloud Security",
-      "IoT Security",
+      "Cybersecurity",
+      "Reverse Engineering",
+      "CTF",
+      "Assembly",
+      "Debugging",
+      "Ethical Hacking",
     ],
   },
+  "2025/2026": {
+    title: "Web Development Specialization",
+    year: "2025/2026",
+    sections: [
+      {
+        
+        title: "Professional Experience",
+        content: [
+          "Internship (Development): Applied programming, databases, and UI design in a real-world environment, bridging foundational knowledge with professional development experience.",
+  
+        ],
+      },
+      {
+        title: "Minor: Binary Exploitation & Reversing",
+        content: [
+          "Learned low-level programming: C, C++, Assembly",
+          "Explored security mechanisms: stack, canary, NX, ASLR, PIE",
+          "Hands-on tools: Ghidra, GDB, Pwntools, Python scripting",
+          "Platforms: Windows & Linux exploitation, x64 debugging",
+          "Practical experience through picoCTF challenges and pwn.college exercises",
+        ],
+      },
+      {
+        title: "Certifications & Competitions",
+        content: [
+          "TCM Academy: Assembly 101 & Python 201 for Hackers",
+          "Participated in CTF competitions, gaining experience in problem-solving under pressure and joining cybersecurity communities",
+        ],
+      },
+      {
+        title: "Skills Developed",
+        content: [
+          "Low-level programming & reverse engineering",
+          "Binary exploitation & vulnerability analysis",
+          "Debugging & exploit development on Linux/Windows",
+          "Collaboration, problem-solving, and competitive thinking in cybersecurity environments",
+        ],
+      },
+    ],
+    tags: [
+      "C/C++",
+      "Assembly",
+      "Python",
+      "Pwntools",
+      "GDB",
+      "Ghidra",
+      "Linux/Windows x64",
+    ],
+  },
+  
 };
 
 const timelineItems = [
   {
-    year: "2022",
-    title: "Started IT Studies",
-    subtitle: "Beginning of technical journey with foundational programming courses",
+    year: "2022/2023",
+    title: "Unlocking the World of IT Studies",
+    subtitle: "Diving into the world of technology as a first-year IT student.",
   },
   {
-    year: "2023",
-    title: "Security Focus & CTF Competitions",
+    year: "2023/2024",
+    title: "Expanding Technical Horizons",
     subtitle:
-      "Discovered passion for cybersecurity through various CTF challenges",
+      "As a second-year IT student, I went deeper into coding and system design.",
   },
   {
-    year: "2025",
-    title: "Web Development Specialization",
-    subtitle: "Frontend & Backend development with modern frameworks",
+    year: "2024/2025",
+    title: "Diving into Cybersecurity & Reverse Engineering",
+    subtitle: "After building a strong foundation, I explored security, reverse engineering, and competitive hacking.",
   },
   {
-    year: "2026",
-    title: "Advanced Security Specialization",
-    subtitle:
-      "Penetration testing, security auditing, and advanced CTF competitions",
+    year: "2025/2026",
+    title: "Professional Development & Specialization",
+    subtitle: "Internship experience and advanced cybersecurity specialization.",
   },
+ 
 ];
 
 const isModalOpen = ref(false);
@@ -337,9 +340,9 @@ onUnmounted(() => {
 
 <style scoped>
 .timeline-section {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-xl) 0; /* Reduced from --space-5xl to --space-xl */
   background: var(--color-surface);
-  min-height: 100vh;
+  /* Removed min-height: 100vh to reduce gaps */
 }
 
 .container {

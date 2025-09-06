@@ -158,7 +158,7 @@ onUnmounted(() => {
 }
 
 .section-spacer {
-    height: var(--space-2xl);
+    height: var(--space-md); /* Reduced from --space-2xl to --space-md */
 }
 
 .intro-content::before {
@@ -183,15 +183,9 @@ onUnmounted(() => {
     max-width: 600px;
 }
 .pp-section {
-background: linear-gradient(
-  135deg,
-    rgba(245, 245, 245, 0.9), /* light beige-grey */
-    rgba(230, 230, 230, 0.9)  /* soft warm grey */
-  );
-
-  backdrop-filter: blur(6px); /* optional: glass effect */
+  background: white;
   color: rgb(0, 0, 0); /* keeps text readable */
-  padding: 3rem;
+  padding: 3rem 3rem 0rem 3rem;
 }
 
 .typing-wrap {
