@@ -152,13 +152,6 @@ const modalData = {
     year: "2024/2025",
     sections: [
       {
-        title: "Professional Experience",
-        content: [
-          "Internship (Development): Applied programming, databases, and UI design in a real-world environment, bridging foundational knowledge with professional development experience.",
-          
-        ],
-      },
-      {
         title: "Minor: Binary Exploitation & Reversing",
         content: [
           "Learned low-level programming: C, C++, Assembly",
@@ -194,53 +187,48 @@ const modalData = {
       "Ethical Hacking",
     ],
   },
-  "2025/2026": {
+  "2025/Present": {
     title: "Web Development Specialization",
-    year: "2025/2026",
+    year: "2025/Present",
     sections: [
       {
-        
-        title: "Professional Experience",
+        title: "Minor: Cloud Computing",
         content: [
-          "Internship (Development): Applied programming, databases, and UI design in a real-world environment, bridging foundational knowledge with professional development experience.",
-  
+          "Designed and documented RESTful APIs using OpenAPI (Swagger), with hands-on experience in API testing and integration.",
+          "Built and deployed serverless and microservice-based solutions using Microsoft Azure, Go, and Python.",
+          "Gained practical knowledge of CI/CD pipelines, DevOps practices, and automated deployments.",
+          "Learned to deploy, maintain, and scale applications in containerized environments with Kubernetes.",
+          "Applied cloud concepts in a real-world group project (SuperApp) for an external client, integrating AI-powered agents to boost Gen Z productivity.",
         ],
       },
       {
-        title: "Minor: Binary Exploitation & Reversing",
+        title: "Certifications",
         content: [
-          "Learned low-level programming: C, C++, Assembly",
-          "Explored security mechanisms: stack, canary, NX, ASLR, PIE",
-          "Hands-on tools: Ghidra, GDB, Pwntools, Python scripting",
-          "Platforms: Windows & Linux exploitation, x64 debugging",
-          "Practical experience through picoCTF challenges and pwn.college exercises",
-        ],
-      },
-      {
-        title: "Certifications & Competitions",
-        content: [
-          "TCM Academy: Assembly 101 & Python 201 for Hackers",
-          "Participated in CTF competitions, gaining experience in problem-solving under pressure and joining cybersecurity communities",
+          "DevSecOps Fundamentals – Cybr (In Progress): Currently learning the fundamentals of DevSecOps, including secure software development practices, threat modeling, automated vulnerability testing, container security, and secure deployment.",
+          "AWS PenTesting: Gained hands-on experience identifying and exploiting AWS misconfigurations in IAM, Lambda, EC2, and S3, while practicing penetration testing through the AWS Console, CLI, and PacU to strengthen skills in real-world cloud security assessments.",
         ],
       },
       {
         title: "Skills Developed",
         content: [
-          "Low-level programming & reverse engineering",
-          "Binary exploitation & vulnerability analysis",
-          "Debugging & exploit development on Linux/Windows",
-          "Collaboration, problem-solving, and competitive thinking in cybersecurity environments",
+          "Cloud architectures, serverless solutions, and microservices",
+          "API design, testing, and documentation (REST, OpenAPI/Swagger)",
+          "CI/CD pipelines, DevOps practices, and containerization (Kubernetes, Docker)",
+          "Cloud security best practices, including AWS PenTesting and DevSecOps fundamentals",
         ],
       },
     ],
     tags: [
-      "C/C++",
-      "Assembly",
-      "Python",
-      "Pwntools",
-      "GDB",
-      "Ghidra",
-      "Linux/Windows x64",
+    "Go",
+    "Python",
+    "Microsoft Azure",
+    "AWS",
+    "Kubernetes",
+    "OpenShift",
+    "Docker",
+    "REST API",
+    "OpenAPI (Swagger)",
+    "CI/CD",
     ],
   },
   
@@ -264,7 +252,7 @@ const timelineItems = [
     subtitle: "After building a strong foundation, I explored security, reverse engineering, and competitive hacking.",
   },
   {
-    year: "2025/2026",
+    year: "2025/Present",
     title: "Professional Development & Specialization",
     subtitle: "Internship experience and advanced cybersecurity specialization.",
   },

@@ -3,7 +3,7 @@
   <div id="app">
     <!-- Fixed Navigation at the top -->
     <Nav />
-    
+
     <!-- Main content sections that stack vertically -->
     <main>
       <!-- Hero/Intro Section -->
@@ -15,7 +15,7 @@
       <section id="timeline">
         <Timeline />
       </section>
-      
+
       <!-- Add more sections here as needed -->
       <!-- <section id="projects">
         <Projects />
@@ -25,6 +25,9 @@
         <Contact />
       </section> -->
     </main>
+
+    <!-- Footer -->
+    <Footer />
   </div>
 </template>
 
@@ -32,6 +35,7 @@
 import Nav from './components/navbar.vue'
 import Intro from './components/intro.vue'
 import Timeline from './components/timeline.vue'
+import Footer from './components/footer.vue'
 // Import other components as you create them
 </script>
 
