@@ -10,6 +10,9 @@
       <section id="home">
         <Intro />
       </section>
+      <section id="aboutMe">
+        <aboutMe />
+      </section>
       
       <!-- Timeline Section -->
       <section id="timeline">
@@ -34,6 +37,7 @@
 <script setup>
 import Nav from './components/navbar.vue'
 import Intro from './components/intro.vue'
+import aboutMe from './components/aboutMe.vue'
 import Timeline from './components/timeline.vue'
 import Footer from './components/footer.vue'
 // Import other components as you create them

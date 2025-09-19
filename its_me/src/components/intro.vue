@@ -25,15 +25,11 @@
 
                         <div class="typing-wrap flex items-center mb-lg">
                             <span class="typing-label text-xl text-secondary">I'm a </span>
-                            <span class="typing font-mono text-xl font-semibold text-gradient">
+                            <span class="typing font-mono text-2xl font-semibold text-gradient">
                                 {{ displayedText }}
                             </span>
                             <span class="caret"></span>
                         </div>
-
-                        <h5 class="intro-sub text-lg font-semibold leading-relaxed mb-2xl" style="color: var(--color-text)">
-    Thanks for stopping by! I appreciate your time in checking out my journey and the projects I've been working on.
-</h5>
                     </div>
                 </div>
 
@@ -59,7 +55,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 const phrases = [
-    'Cloud Student',
+    'Cloud Security Student',
     'CyberSecurity Student',
     'DevSecOps Student'
 ]

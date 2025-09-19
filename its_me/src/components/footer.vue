@@ -87,6 +87,7 @@
                     <p class="copyright text-sm text-muted">
                         © {{ currentYear }} Ghonim. Built with Vue.js & passion for security.
                     </p>
+                    
                     <div class="footer-links">
                         <a href="#privacy" class="footer-link">Privacy</a>
                         <span class="footer-separator">•</span>
