@@ -1,4 +1,3 @@
-
 <template>
   <div id="app">
     <!-- Fixed Navigation at the top -->
@@ -10,12 +9,12 @@
       <section id="home">
         <Intro />
       </section>
-      <section id="aboutMe">
+      <section id="about">
         <aboutMe />
       </section>
       
       <!-- Timeline Section -->
-      <section id="timeline">
+      <section id="experience">
         <Timeline />
       </section>
 

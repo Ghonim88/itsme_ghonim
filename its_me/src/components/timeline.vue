@@ -179,12 +179,14 @@ const modalData = {
       },
     ],
     tags: [
-      "Cybersecurity",
-      "Reverse Engineering",
-      "CTF",
+      "C / C++",
       "Assembly",
+      "Python",
+      "Pwntools",
+      "Ghidra",
+      "GDB",
+      "Windows & Linux exploitation",
       "Debugging",
-      "Ethical Hacking",
     ],
   },
   "2025/Present": {
