@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/itsme_ghonim/its_me/',
+  base: '/itsme_ghonim/',
   plugins: [
     vue(),
     vueDevTools(),
