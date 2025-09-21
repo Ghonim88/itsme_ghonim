@@ -23,7 +23,7 @@
                                 <h3 class="story-greeting text-2xl font-bold text-accent mb-md">
                                     Thanks for stopping by! 👋
                                 </h3>
-                                <p class="story-lead text-lg leading-relaxed text-black">
+                                <p class="story-lead text-md leading-relaxed text-black">
                                     I'm an <span class="highlight-text">IT student</span> with an insatiable curiosity for 
                                     <span class="highlight-text">cybersecurity</span> and 
                                     <span class="highlight-text">cloud computing</span>. 
@@ -123,7 +123,7 @@
                         <h3 class="text-3xl font-bold text-accent mb-md">
                             Beyond the Code
                         </h3>
-                        <p class="text-lg text-black">
+                        <p class="text-lg text-black with-break">
                             When I'm not diving into the latest vulnerabilities or exploring new technologies...
                         </p>
                     </div>
@@ -181,7 +181,7 @@ const passions = ref([
     },
     {
         title: "Cloud Penetration Testing",
-        description: "Testing cloud environments for security weaknesses and misconfigurations",
+        description: "Gaining hands-on practice testing cloud setups for misconfigurations and weaknesses",
         icon: "CloudIcon"
     },
     {
@@ -210,12 +210,12 @@ const activities = ref([
     },
     {
         title: "Tech Meetups",
-        description: "Attending technology events to learn, share, and build professional connections",
+        description: "Attending technology events to learn, share, and build professional communities",
         icon: "UsersIcon"
     },
     {
         title: "Continuous Learning",
-        description: "Always exploring new technologies, tools, and security methodologies",
+        description: "Exploring new technologies and tools, and keeping up with the latest security practices and trends through reading and watching.",
         icon: "BookIcon"
     }
 ])
@@ -225,7 +225,7 @@ const stats = ref([
     { number: "24/7", label: "Learning Mindset" },
     { number: "100%", label: "Passion Driven" },
     { number: "∞", label: "Curiosity Level" },
-    { number: "1", label: "Cup of Coffee" }
+    { number: "2", label: "Cup of Coffee" }
 ])
 
 // Icon components
@@ -609,10 +609,30 @@ const BookIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24
 }
 
 @media (max-width: 480px) {
-    .story-lead {
-        font-size: var(--text-base);
+     .section-title {
+        font-size: var(--text-2xl);
     }
-    
+    .story-greeting {
+        font-size: var(--text-lg);
+    }
+    .balance-header h3 {
+        font-size: var(--text-lg);
+    }
+    .badge-text {
+        font-size: var(--text-xs);
+    }
+    .story-lead {
+        font-size: var(--text-sm);
+    }
+    .passion-title {
+        font-size: var(--text-md);
+    }
+    .passion-desc {
+        font-size: var(--text-xs);
+    }
+    .with-break {
+        font-size: var(--text-sm);
+    }
     .stats-container {
         grid-template-columns: 1fr;
     }

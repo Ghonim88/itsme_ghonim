@@ -1,6 +1,6 @@
 <template>
     <!-- Full-width Cover Picture Section -->
-    <section class="intro-cover full-width">
+    <section class="intro-cover full-width ">
         <img 
             src="../assets/images/coverPicture.jpeg" 
             alt="Cover background"
@@ -18,7 +18,7 @@
             <div class="content-inner flex items-center">
                 <div class="intro-left animate-slide-left">
                     <div class="text-content">
-                        <h1 class="greeting text-6xl font-black leading-tight mb-lg">
+                        <h1 class="greeting text-5xl font-black leading-tight mb-lg">
                             Hello, I'm 
                             <span class="name-highlight text-gradient">Ghonim</span>!
                         </h1>
@@ -131,7 +131,7 @@ onUnmounted(() => {
 <style scoped>
 /* Component-specific styles only */
 .intro-cover {
-    height: 25vh;
+    height: 10vh;
     min-height: 300px;
     position: relative;
     overflow: hidden;
@@ -153,7 +153,7 @@ onUnmounted(() => {
 }
 
 .section-spacer {
-    height: var(--space-md); /* Reduced from --space-2xl to --space-md */
+    height: var(--space-2xl); /* Reduced from --space-2xl to --space-md */
 }
 
 .intro-content::before {
@@ -167,7 +167,7 @@ onUnmounted(() => {
 }
 
 .content-inner {
-    gap: var(--space-4xl);
+    gap: var(--space-xl);
 }
 
 .intro-left {
@@ -180,7 +180,8 @@ onUnmounted(() => {
 .pp-section {
   background: white;
   color: rgb(0, 0, 0); /* keeps text readable */
-  padding: 3rem 3rem 0rem 3rem;
+  padding: 1rem 5rem 2rem 3rem;
+  min-height: 40vh;
 }
 
 .typing-wrap {

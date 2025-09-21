@@ -79,10 +79,10 @@ const modalData = {
     year: "2022/2023",
     sections: [
       {
-        title: "Foundation Courses",
+        title: "From Learning to Building",
         content: [
           "Programming Fundamentals (C#)",
-          "Web Development (HTML, CSS, JavaScript basics)",
+          "Web Development (HTML, CSS, JavaScript)",
           "Database Design & SQL",
           "Networking (Cisco CCNA: Introduction, Switching & Routing)",
           "Linux Essentials & Information Systems",
@@ -106,10 +106,10 @@ const modalData = {
         ],
       },
     ],
-    tags: ["C#", "SQL", "JavaScript (basics)","Figma","Linux","Cisco Networking", "HTML/CSS", "Git"],
+    tags: ["C#", "SQL", "JavaScript","Figma","Linux","Cisco Networking", "HTML/CSS", "Git"],
   },
   "2023/2024": {
-    title: "Foundation Courses",
+    title: "From Learning to Building",
     year: "2023/2024",
     sections: [
       {
@@ -125,7 +125,7 @@ const modalData = {
       {
         title: "Key Projects",
         content: [
-          "Bank Application: Developed a full-stack application with Vue.js frontend and Spring Boot backend, including JWT authentication and unit testing.",
+          "Bank Application: Built a full-stack banking system with Vue.js frontend and Spring Boot backend. Implemented JWT-based authentication for secure access, and applied both unit and Cucumber testing to ensure functionality. Practiced web security by testing for SQL injection, XSS, and other vulnerabilities.",
         ],
       },
       {
@@ -139,6 +139,9 @@ const modalData = {
       },
     ],
     tags: [
+      "PHP",
+      "SQL",
+      "JavaScript",
       "Java",
       "Spring Boot",
       "Testing (JUnit, Cucumber)",
@@ -197,16 +200,16 @@ const modalData = {
         title: "Minor: Cloud Computing",
         content: [
           "Designed and documented RESTful APIs using OpenAPI (Swagger), with hands-on experience in API testing and integration.",
-          "Built and deployed serverless and microservice-based solutions using Microsoft Azure, Go, and Python.",
+          "Built and deployed serverless and microservice-based solutions using Go, and Python.",
           "Gained practical knowledge of CI/CD pipelines, DevOps practices, and automated deployments.",
-          "Learned to deploy, maintain, and scale applications in containerized environments with Kubernetes.",
+          "Learned to deploy, maintain, and scale applications in containerized environments with Kubernetes and OpenShift.",
           "Applied cloud concepts in a real-world group project (SuperApp) for an external client, integrating AI-powered agents to boost Gen Z productivity.",
         ],
       },
       {
         title: "Certifications",
         content: [
-          "DevSecOps Fundamentals – Cybr (In Progress): Currently learning the fundamentals of DevSecOps, including secure software development practices, threat modeling, automated vulnerability testing, container security, and secure deployment.",
+          "DevSecOps Fundamentals – Cybr (In Progress): Currently working on the fundamentals of DevSecOps, including secure software development practices, threat modeling, automated vulnerability testing, container security, and secure deployment.",
           "AWS PenTesting: Gained hands-on experience identifying and exploiting AWS misconfigurations in IAM, Lambda, EC2, and S3, while practicing penetration testing through the AWS Console, CLI, and PacU to strengthen skills in real-world cloud security assessments.",
         ],
       },
@@ -230,7 +233,7 @@ const modalData = {
     "Docker",
     "REST API",
     "OpenAPI (Swagger)",
-    "CI/CD",
+    "CI/CD pipelines",
     ],
   },
   
@@ -256,7 +259,7 @@ const timelineItems = [
   {
     year: "2025/Present",
     title: "Professional Development & Specialization",
-    subtitle: "Internship experience and advanced cybersecurity specialization.",
+    subtitle: "Diving into the world of cloud computing with a strong focus on building and securing scalable solutions.",
   },
  
 ];
@@ -754,6 +757,19 @@ onUnmounted(() => {
   
   .modal-title {
     font-size: var(--text-lg);
+  }
+  .timeline-year {
+    font-size: var(--text-ms);
+  }
+  .timeline-title-item{
+    font-size: var(--text-ms);
+  }
+  .timeline-subtitle-item {
+    font-size: var(--text-xs);
+  }
+  .modal-section li,
+  .tag {
+    font-size: 12px !important;
   }
 }
 </style>
