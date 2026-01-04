@@ -24,7 +24,7 @@
                                     Thanks for stopping by! 👋
                                 </h3>
                                 <p class="story-lead text-md leading-relaxed text-black">
-                                    I'm an <span class="highlight-text">IT student</span> with an insatiable curiosity for 
+                                    I'm an <span class="highlight-text">Early-career IT professional</span> with an insatiable curiosity for 
                                     <span class="highlight-text">cybersecurity</span> and 
                                     <span class="highlight-text">cloud computing</span>. 
                                     My journey spans from understanding how to secure code and exploit software binaries, 
