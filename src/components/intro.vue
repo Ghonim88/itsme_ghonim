@@ -55,9 +55,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 const phrases = [
-    'Cloud Security',
-    'CyberSecurity',
-    'DevSecOps Engineer'
+    'Junior Engineer',
+    'DevOps & SRE',
+    'Cloud & AI Enthusiast'
 ]
 
 const displayedText = ref('')
