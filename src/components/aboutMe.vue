@@ -9,8 +9,8 @@
                 <h2 class="section-title text-5xl font-extrabold text-gradient mb-lg">
                     About Me
                 </h2>
-                <p class="section-subtitle text-xl text-light">
-                    Passionate about security, driven by curiosity
+                <p class="section-subtitle">
+                    Passionate about technology, driven by curiosity
                 </p>
             </div>
 
@@ -24,12 +24,10 @@
                                     Thanks for stopping by! 👋
                                 </h3>
                                 <p class="story-lead text-md leading-relaxed text-black">
-                                    I'm an <span class="highlight-text">IT student</span> with an insatiable curiosity for 
-                                    <span class="highlight-text">cybersecurity</span> and 
-                                    <span class="highlight-text">cloud computing</span>. 
-                                    My journey spans from understanding how to secure code and exploit software binaries, 
-                                    to penetration testing cloud environments and diving deep into software architectures 
-                                    and DevSecOps workflows.
+                                    I'm an <span class="highlight-text">Junior Engineer</span> with an passion for 
+                                    <span class="highlight-text">cloud infrastructure</span>, <span class="highlight-text">DevOps</span>, <span class="highlight-text">SRE</span> and
+                                    <span class="highlight-text">secure software architecture</span>. 
+                                    My journey spans from building scalable, automated workflows and AI-powered platforms, to implementing DevSecOps pipelines and secure coding practices, while continuously exploring cloud environments and platform reliability.
                                 </p>
                             </div>
 
@@ -58,14 +56,14 @@
                                         <span class="dot yellow"></span>
                                         <span class="dot green"></span>
                                     </div>
-                                    <span class="code-title">security_mindset.py</span>
+                                    <span class="code-title">engineer_mindset.py</span>
                                 </div>
                                 <div class="code-content">
                                     <div class="code-line">
                                         <span class="line-number">1</span>
                                         <span class="code-text">
-                                            <span class="keyword">class</span> 
-                                            <span class="class-name">CyberSecurityPassion</span>:
+                                            <span class="keyword">class</span>&nbsp;
+                                            <span class="class-name">EngineerMindset</span>:
                                         </span>
                                     </div>
                                     <div class="code-line">
@@ -84,31 +82,43 @@
                                     <div class="code-line">
                                         <span class="line-number">4</span>
                                         <span class="code-text">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"cyber_security"</span>,
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"cloud_infrastructure"</span>,
                                         </span>
                                     </div>
                                     <div class="code-line">
                                         <span class="line-number">5</span>
                                         <span class="code-text">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"cloud_security"</span>,
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"devops"</span>,
                                         </span>
                                     </div>
                                     <div class="code-line">
                                         <span class="line-number">6</span>
                                         <span class="code-text">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"devsecops"</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"sre"</span>,
                                         </span>
                                     </div>
                                     <div class="code-line">
                                         <span class="line-number">7</span>
                                         <span class="code-text">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;]
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"automation"</span>,
                                         </span>
                                     </div>
                                     <div class="code-line">
                                         <span class="line-number">8</span>
                                         <span class="code-text">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;self.always_learning = <span class="boolean">True</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"ai_integration"</span>,
+                                        </span>
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">9</span>
+                                        <span class="code-text">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"software_architecture"</span>
+                                        </span>
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">10</span>
+                                        <span class="code-text">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;]
                                         </span>
                                     </div>
                                 </div>
@@ -175,23 +185,23 @@ import { ref } from 'vue'
 // Passion points data
 const passions = ref([
     {
-        title: "Vulnerability Research",
-        description: "Discovering and analyzing the latest security flaws and attack vectors",
+        title: "Cloud Engineering",
+        description: "Designing, deploying, and maintaining scalable cloud infrastructure and automated workflows.",
         icon: "ShieldIcon"
     },
     {
-        title: "Cloud Penetration Testing",
-        description: "Gaining hands-on practice testing cloud setups for misconfigurations and weaknesses",
+        title: "AI-Enhanced Systems",
+        description: "Integrating AI-powered assistance to improve platform usability, reliability, and user guidance.",
         icon: "CloudIcon"
     },
     {
-        title: "DevSecOps Integration",
-        description: "Building security into development workflows and CI/CD pipelines",
+        title: "DevOps & DevSecOps Integration",
+        description: "Building automation and security into development workflows, CI/CD pipelines, and cloud deployments.",
         icon: "CodeIcon"
     },
     {
         title: "Software Architecture",
-        description: "Understanding secure design patterns and architectural principles",
+        description: "Designing and understanding robust, scalable, and maintainable systems.",
         icon: "CubeIcon"
     }
 ])
@@ -293,6 +303,11 @@ const BookIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24
 .section-subtitle {
     max-width: 400px;
     margin: 0 auto;
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: var(--color-muted);
 }
 
 /* Story Section */
